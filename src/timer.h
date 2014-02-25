@@ -8,21 +8,20 @@ class QTimer;
 class Timer:public QObject
 {
     Q_OBJECT
-    QDateTime dt;
-    QTimer *timer;
-    int status;
-    int secMas[3];
-    int numLoop;
+	QDateTime m_dt;
+	QTimer *m_pTimer;
+	int m_secMas[3];
+	unsigned char m_Rx;
+	unsigned char m_S0;
 public:
-    Timer();
+	Timer(int time, QObject *parent = 0);
 private slots:
     void slotTimeUpDate();
 public slots:
-    void slotTimerStart();
-    void slotTimerStop();
+	void slotTimerSig(bool);
 signals:
-    void sigTimeTick(int,int);
-    void sigTimeEnd(int);
+	void sigTimeTick(int);
+	void sigCK(bool big=false);
 };
 
 #endif // TIMER_H

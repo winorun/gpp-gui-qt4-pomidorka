@@ -7,6 +7,7 @@ class QPushButton;
 class StaticView : public QMainWindow
 {
     Q_OBJECT
+
 public:
     explicit StaticView(QWidget *parent = 0);
 
@@ -14,7 +15,7 @@ public:
 signals:
     
 public slots:
-    
+
 };
 
 #endif // STATICVIEW_H
