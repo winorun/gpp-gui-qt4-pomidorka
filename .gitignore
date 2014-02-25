@@ -1,4 +1,1 @@
-build/
-sources/gpp-gui-qt4-pomidorka.pro
-sources/gpp-gui-qt4-pomidorka.pro.user
-
+CMakeLists.txt.user
